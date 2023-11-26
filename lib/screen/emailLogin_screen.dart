@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatefulWidget {
+class EmailLoginPage extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _EmailLoginPageState createState() => _EmailLoginPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _EmailLoginPageState extends State<EmailLoginPage> {
   @override
   void initState() {
     //initState 초기화를 위해 필요한 저장공간
@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
                   Container(
                     margin: EdgeInsets.all(70),
                     child: Text(
-                      "Welcome!",
+                      "Login",
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 35,
@@ -97,6 +97,18 @@ class _LoginPageState extends State<LoginPage> {
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(15.0)),
                           backgroundColor: Color.fromARGB(255, 54, 129, 171)),
+                    ),
+                  ),
+                  Container(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Don’t have any account?'),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text('Sign up'),
+                        )
+                      ],
                     ),
                   ),
                 ],
