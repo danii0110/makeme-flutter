@@ -15,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 54, 129, 171),
+      backgroundColor: const Color.fromRGBO(54, 129, 171, 1),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -26,13 +26,14 @@ class _LoginPageState extends State<LoginPage> {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20))),
-              width: double.infinity,
+              // width: double.infinity,
               height: 700,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+                // mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                    margin: EdgeInsets.all(70),
+                    // margin: EdgeInsets.all(70),
+                    margin: EdgeInsets.fromLTRB(0, 100, 0, 40),
                     child: Text(
                       "Welcome!",
                       style: TextStyle(
@@ -81,22 +82,16 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   Container(
-                    width: 330,
-                    height: 65,
                     margin: EdgeInsets.all(10),
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Login',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 25,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Don’t have any account?'),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text('Sign up'),
                         ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15.0)),
-                          backgroundColor: Color.fromARGB(255, 54, 129, 171)),
+                      ],
                     ),
                   ),
                 ],
