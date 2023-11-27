@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:makeme_flutter/screen/email_login_screen.dart';
+import 'package:makeme_flutter/screen/email_login_screen.dart';
 import 'package:makeme_flutter/screen/login_screen.dart';
 
 void main() {
@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'makeMe',
-      home: LoginPage(),
-      // home: EmailLoginPage(),
+      // home: LoginPage(),
+      home: EmailLoginPage(),
     );
   }
 }
