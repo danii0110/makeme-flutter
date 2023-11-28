@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20))),
               // width: double.infinity,
-              height: 700,
+              height: 720,
               child: Column(
                 // mainAxisAlignment: MainAxisAlignment.start,
                 children: [

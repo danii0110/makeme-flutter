@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class EmailLoginPage extends StatefulWidget {
+class SignUpPage extends StatefulWidget {
   @override
-  _EmailLoginPageState createState() => _EmailLoginPageState();
+  _SignUpPageState createState() => _SignUpPageState();
 }
 
-class _EmailLoginPageState extends State<EmailLoginPage> {
+class _SignUpPageState extends State<SignUpPage> {
   // final myController = TextEditingController();
 
   @override
@@ -49,11 +49,34 @@ class _EmailLoginPageState extends State<EmailLoginPage> {
                     // margin: EdgeInsets.all(70),
                     margin: EdgeInsets.fromLTRB(0, 100, 0, 40),
                     child: Text(
-                      "Login",
+                      "Sign up",
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 35,
                         fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 330,
+                    height: 65,
+                    margin: EdgeInsets.all(10),
+                    child: const TextField(
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderSide: BorderSide(
+                              width: 1.0,
+                              color: Color.fromRGBO(54, 129, 171, 1)),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderSide: BorderSide(
+                              width: 1.0,
+                              color: Color.fromRGBO(54, 129, 171, 1)),
+                        ),
+                        labelText: 'Nickname',
+                        hintText: 'Enter your Nickname',
                       ),
                     ),
                   ),
@@ -108,10 +131,34 @@ class _EmailLoginPageState extends State<EmailLoginPage> {
                     width: 330,
                     height: 65,
                     margin: EdgeInsets.all(10),
+                    child: const TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderSide: BorderSide(
+                              width: 1.0,
+                              color: Color.fromRGBO(54, 129, 171, 1)),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)),
+                          borderSide: BorderSide(
+                              width: 1.0,
+                              color: Color.fromRGBO(54, 129, 171, 1)),
+                        ),
+                        labelText: 'Confirm Password',
+                        hintText: 'Confirm your password',
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 330,
+                    height: 65,
+                    margin: EdgeInsets.all(10),
                     child: ElevatedButton(
                       onPressed: () {},
                       child: Text(
-                        'Login',
+                        'Create Account',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
@@ -128,10 +175,10 @@ class _EmailLoginPageState extends State<EmailLoginPage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Don’t have any account?'),
+                        Text('Already have an account?'),
                         TextButton(
                           onPressed: () {},
-                          child: Text('Sign up'),
+                          child: Text('Login'),
                         ),
                       ],
                     ),
